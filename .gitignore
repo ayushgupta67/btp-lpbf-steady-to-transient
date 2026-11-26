@@ -17,10 +17,12 @@
 !/maxmap_data.py
 !/maxmap_analyze.py
 !/maxmap_train.py
+!/maxmap_report.py
 !/bead2_data.py
 !/bead2_train.py
 !/bead2_hybrid.py
 !/bead2_best_model.py
+!/bead2_report.py
 !/bead_model.py
 !/bead_data.py
 # Case 3: geometry
@@ -36,6 +38,7 @@
 !/rodflux_outputs/
 /rodflux_outputs/*
 !/rodflux_outputs/summary.json
+!/rodflux_outputs/patch_effect.csv
 !/rod1d_outputs/
 /rod1d_outputs/*
 !/rod1d_outputs/rod1d_summary.json

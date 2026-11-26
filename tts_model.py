@@ -10,6 +10,11 @@ Baselines on the same test elements: training mean, and a linear fit on the cent
 Temperatures are shifted/scaled before the model (T' = 65 + (T - 90,000) / 100) because the raw values are ~1e5 C;
 empty cells are T' = 65. Every reported number is back in C.
 Outputs: tts_outputs/model_results.json, tts_outputs/model_predictions.npz
+
+    python -u tts_model.py --checks
+
+Robustness check -> tts_outputs/model_checks.json: the same model with seeds 1 and 2, and a "shape only"
+input (every solid cell set to one constant, so only the position of walls and voids is visible), seeds 0-2.
 """
 import csv
 import json
@@ -80,5 +85,27 @@ def main():
     print(json.dumps(res, indent=1))
 
 
+def checks():
+    torch.set_num_threads(8)
+    L, ix, iy, ss, tr, Pss, Ptr, empty = load()
+    te = L >= N_TEST_FROM; trn = ~te
+    c = (2 * R + 1) ** 2 // 2
+    epochs = int(np.ceil(UPDATES / np.ceil(trn.sum() / BATCH)))
+    shape_only = np.where(Pss == 65.0, 65.0, 1000.0)
+    out = {}
+    for name, inp in (("steady", Pss), ("shape_only", shape_only)):
+        for seed in (0, 1, 2):
+            if name == "steady" and seed == 0:
+                continue  # that run is main()
+            m = Model(Config(n_nodes=Pss.shape[1], n_scalars=1, hidden=512, depth=2, code=64), "cpu")
+            m.scalar_fn = lambda p: np.asarray(p, dtype=np.float64).reshape(-1, 1)
+            m.fit(inp[trn], L[trn], Ptr[trn], np.arange(Pss.shape[1]), epochs=epochs, batch=BATCH, seed=seed)
+            full, _ = m.predict(inp[te], L[te], seed=seed)
+            out[f"{name}_seed{seed}"] = r = scores(from_t(full[:, c]), tr[te], empty[te])
+            print(name, seed, {k: round(v, 1) for k, v in r.items()}, flush=True)
+    (OUT / "model_checks.json").write_text(json.dumps(out, indent=1))
+
+
 if __name__ == "__main__":
-    main()
+    import sys
+    checks() if "--checks" in sys.argv else main()
