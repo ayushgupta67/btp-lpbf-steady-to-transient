@@ -1,45 +1,62 @@
-# ---- not in the repository: simulation data, environment, large or private files ----
-.venv/
-__pycache__/
-.vscode/
-.~lock*
-*.zip
-SS_new/
-Steady_state_wall/
-Transient_wall/
-Trans_to_SS_dataset/
-Updated_complete_dataset_singlebead/
-Single_bead_Data_set/
-*.npz
-*.npy
-*.pt
-*.mp4
-*.webm
-*.csv.gz
-final_deck_assets/video_dl/
-report/.build/
-materials-13-04576-v3.pdf
+# Only the files listed below are part of the repository. Everything else in this folder
+# (simulation data, caches, models, slide generators, drafts) stays local.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
 
-# experiment outputs: keep only summaries, logs, results tables and figures (no simulation values)
-*_outputs/**
-!*_outputs/**/
-!*_outputs/**/*.md
-!*_outputs/**/*.json
-!*_outputs/**/*.png
-!*_outputs/**/*.txt
-!*_outputs/**/*results*.csv
-!*_outputs/**/cv_folds.csv
-*_outputs/**/cache/
-*_outputs/**/csv/
-*_outputs/**/model/
+# shared model
+!/maxmap_model.py
+# Case 1: 1D rods
+!/rod_flux_sim.py
+!/rod_flux_experiment.py
+!/rod1d_sim.py
+!/rod1d_experiment.py
+!/rod1d_allparams.py
+# Case 2: single bead
+!/maxmap_data.py
+!/maxmap_analyze.py
+!/maxmap_train.py
+!/bead2_data.py
+!/bead2_train.py
+!/bead2_hybrid.py
+!/bead2_best_model.py
+!/bead_model.py
+!/bead_data.py
+# Case 3: geometry
+!/tts_data.py
+!/tts_analyze.py
+!/tts_model.py
+# earlier study: wall dataset
+!/wall_data.py
+!/baselines.py
+!/diffusion_compare.py
 
-# documents: only the PDFs listed here
-*.pptx
-*.docx
-*.pdf
-!report/BTP_report.pdf
-!presentation/BTP_final_presentation.pdf
-!BTP_midsem_presentation.pdf
-!slide_meet8.pdf
-!slide_meet9.pdf
-!slide_meet10.pdf
+# results summaries
+!/rodflux_outputs/
+/rodflux_outputs/*
+!/rodflux_outputs/summary.json
+!/rod1d_outputs/
+/rod1d_outputs/*
+!/rod1d_outputs/rod1d_summary.json
+!/rod1d_outputs/rod1d_allparams.json
+!/maxmap_outputs/
+/maxmap_outputs/*
+!/maxmap_outputs/RESULTS.md
+!/maxmap_outputs/summary.json
+!/bead2_outputs/
+/bead2_outputs/*
+!/bead2_outputs/RESULTS.md
+!/tts_outputs/
+/tts_outputs/*
+!/tts_outputs/DATA_REPORT.md
+!/tts_outputs/model_results.json
+!/tts_outputs/model_checks.json
+
+# documents
+!/report/
+/report/*
+!/report/BTP_report.pdf
+!/presentation/
+/presentation/*
+!/presentation/BTP_final_presentation.pdf
