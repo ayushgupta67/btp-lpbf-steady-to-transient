@@ -1,0 +1,27 @@
+rule check: 35 rows with signal by the cooling-window rule, 35 by the data; mismatches: 0
+[hybrid cv  1/24] (np.float64(333.3), 10.0) train 81s
+[hybrid cv  2/24] (np.float64(333.3), 50.0) train 91s
+[hybrid cv  3/24] (np.float64(333.3), 100.0) train 94s
+[hybrid cv  4/24] (np.float64(400.0), 10.0) train 86s
+[hybrid cv  5/24] (np.float64(400.0), 50.0) train 85s
+[hybrid cv  6/24] (np.float64(400.0), 100.0) train 95s
+[hybrid cv  7/24] (np.float64(500.0), 10.0) train 83s
+[hybrid cv  8/24] (np.float64(500.0), 50.0) train 80s
+[hybrid cv  9/24] (np.float64(500.0), 100.0) train 99s
+[hybrid cv 10/24] (np.float64(600.0), 10.0) train 53s
+[hybrid cv 11/24] (np.float64(600.0), 50.0) train 79s
+[hybrid cv 12/24] (np.float64(600.0), 100.0) train 93s
+[hybrid cv 13/24] (np.float64(666.7), 10.0) train 92s
+[hybrid cv 14/24] (np.float64(666.7), 50.0) train 73s
+[hybrid cv 15/24] (np.float64(666.7), 100.0) train 89s
+[hybrid cv 16/24] (np.float64(800.0), 10.0) train 92s
+[hybrid cv 17/24] (np.float64(800.0), 50.0) train 84s
+[hybrid cv 18/24] (np.float64(800.0), 100.0) train 79s
+[hybrid cv 19/24] (np.float64(900.0), 10.0) train 87s
+[hybrid cv 20/24] (np.float64(900.0), 50.0) train 95s
+[hybrid cv 21/24] (np.float64(900.0), 100.0) train 76s
+[hybrid cv 22/24] (np.float64(1200.0), 10.0) train 84s
+[hybrid cv 23/24] (np.float64(1200.0), 50.0) train 88s
+[hybrid cv 24/24] (np.float64(1200.0), 100.0) train 55s
+[hybrid cv] wall 11.4 min
+[hybrid final] 29s, saved; total 11.9 min

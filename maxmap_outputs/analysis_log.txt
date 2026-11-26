@@ -1,0 +1,92 @@
+== 1. SS_new on disk ==
+runs 27, frames 8640, frames per run [320]
+settings covered: 27 of 27; missing: [] ; duplicated: []
+folder name disagrees with parameter files: []
+
+== 2. Values ==
+P120_V100_H0.1     P=120.0 v=100.0 h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V100_H0.15    P=120.0 v=100.0 h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V100_H0.18    P=120.0 v=100.0 h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V10_H0.1      P=120.0 v=10.0  h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V10_H0.15     P=120.0 v=10.0  h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V10_H0.18     P=120.0 v=10.0  h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V50_H0.1      P=120.0 v=50.0  h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V50_H0.15     P=120.0 v=50.0  h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P120_V50_H0.18     P=120.0 v=50.0  h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V100_H0.1      P=60.0  v=100.0 h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V100_H0.15     P=60.0  v=100.0 h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V100_H0.18     P=60.0  v=100.0 h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V10_H0.1       P=60.0  v=10.0  h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V10_H0.15      P=60.0  v=10.0  h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V10_H0.18      P=60.0  v=10.0  h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V50_H0.1       P=60.0  v=50.0  h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V50_H0.15      P=60.0  v=50.0  h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P60_V50_H0.18      P=60.0  v=50.0  h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V100_H0.1      P=90.0  v=100.0 h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V100_H0.15     P=90.0  v=100.0 h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V100_H0.18     P=90.0  v=100.0 h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V10_H0.1       P=90.0  v=10.0  h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V10_H0.15      P=90.0  v=10.0  h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V10_H0.18      P=90.0  v=10.0  h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V50_H0.1       P=90.0  v=50.0  h=0.1   frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V50_H0.15      P=90.0  v=50.0  h=0.15  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+P90_V50_H0.18      P=90.0  v=50.0  h=0.18  frames=320 t=[2.0010,2.3200] peak= 6666.6 min=  65.00 frames_with_T<64=0 nan=False
+
+== 3. Do the steady frames follow the laser like the transient frames? (same frame index) ==
+P120_V100_H0.1     SS hot x: [5, 11, 19, 27, 36]  transient hot x: [5, 12, 20, 28, 36]  time match: False
+P120_V10_H0.15     SS hot x: [5, 11, 19, 27, 36]  transient hot x: [4, 13, 21, 29, 36]  time match: False
+P120_V50_H0.18     SS hot x: [5, 11, 19, 27, 36]  transient hot x: [5, 12, 20, 28, 36]  time match: False
+P60_V10_H0.1       SS hot x: [5, 11, 19, 27, 36]  transient hot x: [4, 13, 21, 29, 36]  time match: False
+P60_V50_H0.15      SS hot x: [5, 11, 19, 27, 36]  transient hot x: [4, 12, 20, 28, 36]  time match: False
+P90_V100_H0.18     SS hot x: [5, 11, 19, 27, 36]  transient hot x: [5, 12, 20, 28, 36]  time match: False
+P90_V50_H0.1       SS hot x: [5, 11, 19, 27, 36]  transient hot x: [5, 12, 20, 28, 36]  time match: False
+
+== 4. Exact copies between steady runs ==
+6 identical pairs
+  P120_V10_H0.1 == ['P90_V100_H0.1', 'P90_V10_H0.18', 'P90_V50_H0.15']
+  P90_V100_H0.1 == ['P90_V10_H0.18', 'P90_V50_H0.15']
+  P90_V10_H0.18 == ['P90_V50_H0.15']
+
+== 5. Does the steady field depend on v? (same P, hatch; compare fields frame by frame) ==
+  P=60.0  h=0.1   speeds [10.0, 50.0, 100.0]: max |difference| 0.0758 C
+  P=60.0  h=0.15  speeds [10.0, 50.0, 100.0]: max |difference| 0.103 C
+  P=60.0  h=0.18  speeds [10.0, 50.0, 100.0]: max |difference| 0.0682 C
+  P=90.0  h=0.1   speeds [10.0, 50.0, 100.0]: max |difference| 0.0538 C
+  P=90.0  h=0.15  speeds [10.0, 50.0, 100.0]: max |difference| 0.049 C
+  P=90.0  h=0.18  speeds [10.0, 50.0, 100.0]: max |difference| 0.0259 C
+  P=120.0 h=0.1   speeds [10.0, 50.0, 100.0]: max |difference| 0.0453 C
+  P=120.0 h=0.15  speeds [10.0, 50.0, 100.0]: max |difference| 0.115 C
+  P=120.0 h=0.18  speeds [10.0, 50.0, 100.0]: max |difference| 0.063 C
+
+== 6. Max-over-frames fields (the new input / output) ==
+pairs: 27 | skipped: []
+nodes whose max differs from 65 in any pair: 1252 of 5166
+  P60_v10_hpnt18/AM_wall P/h=  333.3 v=10.0  SS max   6666.6  transient max   3369.0  ratio 0.500  hot nodes (>100C rise) SS 1026 tr  204
+  P60_v100_hpnt18/AM_wall P/h=  333.3 v=100.0 SS max   6666.6  transient max   2651.6  ratio 0.392  hot nodes (>100C rise) SS 1026 tr  194
+  P60_v50_hpnt18/AM_wall P/h=  333.3 v=50.0  SS max   6666.6  transient max   2965.0  ratio 0.439  hot nodes (>100C rise) SS 1026 tr  198
+  P60_v100_hpnt15/AM_wall P/h=  400.0 v=100.0 SS max   6666.6  transient max   3094.1  ratio 0.459  hot nodes (>100C rise) SS 1026 tr  196
+  P60_v50_hpnt15/AM_wall P/h=  400.0 v=50.0  SS max   6666.6  transient max   3475.6  ratio 0.517  hot nodes (>100C rise) SS 1026 tr  200
+  P60_v10_hpnt15/AM_wall P/h=  400.0 v=10.0  SS max   6666.6  transient max   3923.2  ratio 0.584  hot nodes (>100C rise) SS 1026 tr  206
+  P90_v100_hpnt18    P/h=  500.0 v=100.0 SS max   6666.6  transient max   3757.0  ratio 0.559  hot nodes (>100C rise) SS 1026 tr  196
+  P90_v10_hpnt18     P/h=  500.0 v=10.0  SS max   6666.6  transient max   4712.4  ratio 0.704  hot nodes (>100C rise) SS 1026 tr  206
+  P90_v50_hpnt18/AM_wall P/h=  500.0 v=50.0  SS max   6666.6  transient max   4233.2  ratio 0.631  hot nodes (>100C rise) SS 1026 tr  204
+  P90_v50_hpnt15     P/h=  600.0 v=50.0  SS max   6666.6  transient max   4973.0  ratio 0.743  hot nodes (>100C rise) SS 1026 tr  206
+  P90_v100_hpnt15/AM_wall P/h=  600.0 v=100.0 SS max   6666.6  transient max   4414.7  ratio 0.659  hot nodes (>100C rise) SS 1026 tr  198
+  P90_v10_hpnt15/AM_wall P/h=  600.0 v=10.0  SS max   6666.6  transient max   5444.4  ratio 0.815  hot nodes (>100C rise) SS 1026 tr  206
+  P60_v50_hptn1/AM_wall P/h=  600.0 v=50.0  SS max   6666.6  transient max   5444.4  ratio 0.815  hot nodes (>100C rise) SS 1026 tr  206
+  P60_v100_hptn1     P/h=  600.0 v=100.0 SS max   6666.6  transient max   4414.7  ratio 0.659  hot nodes (>100C rise) SS 1026 tr  198
+  P60_v10_hpnt1      P/h=  600.0 v=10.0  SS max   6666.6  transient max   5444.4  ratio 0.815  hot nodes (>100C rise) SS 1026 tr  206
+  P120_v100_hpnt18/AM_wall P/h=  666.7 v=100.0 SS max   6666.6  transient max   4847.6  ratio 0.724  hot nodes (>100C rise) SS 1026 tr  198
+  P120_v50_hpnt18    P/h=  666.7 v=50.0  SS max   6666.6  transient max   5451.3  ratio 0.816  hot nodes (>100C rise) SS 1026 tr  206
+  P120_v10_hpnt18    P/h=  666.7 v=10.0  SS max   6666.6  transient max   5916.3  ratio 0.886  hot nodes (>100C rise) SS 1026 tr  206
+  P120_v10_hpnt15/AM_wall P/h=  800.0 v=10.0  SS max   6666.6  transient max   6818.6  ratio 1.023  hot nodes (>100C rise) SS 1026 tr  206
+  P120_v100_hpnt15/AM_wall P/h=  800.0 v=100.0 SS max   6666.6  transient max   5692.2  ratio 0.852  hot nodes (>100C rise) SS 1026 tr  198
+  P120_v50_hpnt15/AM_wall P/h=  800.0 v=50.0  SS max   6666.6  transient max   6370.6  ratio 0.955  hot nodes (>100C rise) SS 1026 tr  206
+  P90_v10_hpnt1/AM_wall P/h=  900.0 v=10.0  SS max   6666.6  transient max   7477.0  ratio 1.123  hot nodes (>100C rise) SS 1026 tr  206
+  P90_v50_hpnt1/AM_wall P/h=  900.0 v=50.0  SS max   6666.6  transient max   7030.1  ratio 1.055  hot nodes (>100C rise) SS 1026 tr  206
+  P90_v100_hpnt1/AM_wall P/h=  900.0 v=100.0 SS max   6666.6  transient max   6303.4  ratio 0.945  hot nodes (>100C rise) SS 1026 tr  202
+  P120_v10_hpnt1/AM_wall P/h= 1200.0 v=10.0  SS max   6666.6  transient max   9311.2  ratio 1.401  hot nodes (>100C rise) SS 1026 tr  206
+  P120_v100_hpnt1/AM_wall P/h= 1200.0 v=100.0 SS max   6666.6  transient max   8044.6  ratio 1.209  hot nodes (>100C rise) SS 1026 tr  204
+  P120_v50_hpnt1/AM_wall P/h= 1200.0 v=50.0  SS max   6666.6  transient max   8879.3  ratio 1.335  hot nodes (>100C rise) SS 1026 tr  206
+distinct (P/hatch, v) groups: 24
+identical transient max fields: [('P60_v100_hptn1', 'P90_v100_hpnt15/AM_wall'), ('P60_v10_hpnt1', 'P60_v50_hptn1/AM_wall'), ('P60_v10_hpnt1', 'P90_v10_hpnt15/AM_wall'), ('P60_v50_hptn1/AM_wall', 'P90_v10_hpnt15/AM_wall')]

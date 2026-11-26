@@ -1,0 +1,20 @@
+{
+  "pairs": 26,
+  "folds": 24,
+  "rmse_all_C": 9.776231738623089,
+  "mae_all_C": 0.9251814855600953,
+  "mean_abs_peak_err_pct": 1.2737539640289697,
+  "median_abs_peak_err_pct": 1.1189969663913049,
+  "max_abs_peak_err_pct": 5.0980596475093005,
+  "mean_hotspot_jaccard": 1.0,
+  "mean_rel_l2": 0.01124419852063214,
+  "in_sample_rmse_all_C": 2.5627603231947513,
+  "final_train_s": 41.12503981590271,
+  "cv_wall_s": 1032.6817345619202,
+  "cv_fold_train_s_mean": 168.30674987037978,
+  "total_s": 1074.8086318969727,
+  "parameters": 2005668,
+  "epochs": 1500,
+  "batch": 8,
+  "cpu_threads": 16
+}

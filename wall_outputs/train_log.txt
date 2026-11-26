@@ -1,0 +1,20 @@
+wall data: 480 frames, 1094 active cells; train 359 / test 121 frames (held out: time blocks 62..82)
+      epoch    1/400  loss 0.00529
+      epoch  100/400  loss 0.00013
+      epoch  200/400  loss 0.00004
+      epoch  300/400  loss 0.00001
+      epoch  400/400  loss 0.00001
+trained 400 epochs in 71s, final loss 6.36e-06
+
+steady -> transient, held-out last 25% of the build, MAE in C (lower is better)
+   diffusion (mean of draws)           1.4806
+   ridge field->field (lam=0.01)       1.5080
+   ridge field->field (lam=100)        1.5283
+   per-cell affine                     1.5506
+   per-cell mean                       1.6279
+   global mean                         2.3525
+   identity (copy transient)           4.3793
+   [oracle] previous frame             0.0726   (needs the answer for the neighbouring frame)
+
+diffusion draw spread 0.001 C;  no-skill (per-cell mean) 1.628; best baseline 1.508 (7.4% below no-skill)
+wrote /home/ayush/Desktop/Ayush_btp/wall_outputs/wall_demo.png

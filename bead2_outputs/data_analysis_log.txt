@@ -1,0 +1,152 @@
+== 1. What is on disk ==
+transient cases: 27  frames: 8801
+steady cases   : 27  frames: 2700   missing folders: [('steady', 'P60_v100_hpnt18', 'no my_temp files')]
+
+== 2. Parameter grid (from the txt files) ==
+transient: distinct settings 27 of 27; absent: []; duplicated: {}
+steady: distinct settings 25 of 27; absent: [(60.0, 50.0, 0.1), (60.0, 100.0, 0.15)]; duplicated: {(60.0, 50.0, 0.15): ['P60_v10_hpnt15/AM_wall', 'P60_v50_hpnt1', 'P60_v50_hpnt15']}
+folder name disagrees with parameter files: [('steady', 'P60_v100_hpnt15'), ('steady', 'P60_v10_hpnt15/AM_wall'), ('steady', 'P60_v50_hpnt1')]
+
+== 3. Transient integrity ==
+P120_v100_hpnt1    fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=8045@2.003 back65@3.0319999999999965 tmin=-205.26 nan=False
+P120_v100_hpnt15   fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=5692@2.005 back65@3.0319999999999965 tmin=-140.16 nan=False
+P120_v100_hpnt18   fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=4848@2.008 back65@3.0319999999999965 tmin=-114.71 nan=False
+P120_v10_hpnt1     fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=9311@2.010 back65@3.319999999999993 tmin=39.18 nan=False
+P120_v10_hpnt15    fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=6819@2.010 back65@3.319999999999993 tmin=35.12 nan=False
+P120_v10_hpnt18    fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=5916@2.010 back65@3.319999999999993 tmin=36.07 nan=False
+P120_v50_hpnt1     fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=8879@2.002 back65@3.063999999999993 tmin=-123.35 nan=False
+P120_v50_hpnt15    fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=6371@2.002 back65@3.063999999999993 tmin=-87.58 nan=False
+P120_v50_hpnt18    fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=5451@2.002 back65@3.063999999999993 tmin=-73.40 nan=False
+P60_v100_hpnt15    fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=3094@2.014 back65@3.0319999999999965 tmin=-56.58 nan=False
+P60_v100_hpnt18    fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=2652@2.013 back65@3.0319999999999965 tmin=-40.23 nan=False
+P60_v100_hptn1     fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=4415@2.010 back65@3.0319999999999965 tmin=-101.14 nan=False
+P60_v10_hpnt1      fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=5444@2.010 back65@3.319999999999993 tmin=35.42 nan=False
+P60_v10_hpnt15     fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=3923@2.010 back65@3.319999999999993 tmin=36.22 nan=False
+P60_v10_hpnt18     fr=325  t=[2.001,7.320] heat_end=2.319999999999993 peak=3369@2.010 back65@3.319999999999993 tmin=37.97 nan=False
+P60_v50_hpnt15     fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=3476@2.002 back65@3.063999999999993 tmin=-36.61 nan=False
+P60_v50_hpnt18     fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=2965@2.002 back65@3.063999999999993 tmin=-24.70 nan=False
+P60_v50_hptn1      fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=5444@2.010 back65@3.319999999999993 tmin=35.42 nan=False
+P90_v100_hpnt1     fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=6303@2.004 back65@3.0319999999999965 tmin=-157.17 nan=False
+P90_v100_hpnt15    fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=4415@2.010 back65@3.0319999999999965 tmin=-101.14 nan=False
+P90_v100_hpnt18    fr=326  t=[2.000,7.032] heat_end=2.0319999999999965 peak=3757@2.013 back65@3.0319999999999965 tmin=-80.01 nan=False
+P90_v10_hpnt1      fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=7477@2.010 back65@3.319999999999993 tmin=35.25 nan=False
+P90_v10_hpnt15     fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=5444@2.010 back65@3.319999999999993 tmin=35.42 nan=False
+P90_v10_hpnt18     fr=326  t=[2.001,7.320] heat_end=2.319999999999993 peak=4712@2.010 back65@3.319999999999993 tmin=35.00 nan=False
+P90_v50_hpnt1      fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=7030@2.002 back65@3.063999999999993 tmin=-96.92 nan=False
+P90_v50_hpnt15     fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=4973@2.002 back65@3.063999999999993 tmin=-66.07 nan=False
+P90_v50_hpnt18     fr=326  t=[2.000,7.064] heat_end=2.063999999999993 peak=4233@2.002 back65@3.063999999999993 tmin=-52.61 nan=False
+
+== 4. Exact / near copies between transient runs (same frame index) ==
+  P60_v100_hptn1 == P90_v100_hpnt15  (max |diff| 0.00e+00)
+  P60_v10_hpnt1 == P60_v50_hptn1  (max |diff| 0.00e+00)
+  P60_v10_hpnt1 == P90_v10_hpnt15  (max |diff| 0.00e+00)
+  P60_v50_hptn1 == P90_v10_hpnt15  (max |diff| 0.00e+00)
+
+== 5. Does the peak depend on P/hatch and v only? ==
+  P/h=600.0   v=10.0  peaks ['5444', '5444']  spread 0.00  ['P60_v10_hpnt1', 'P90_v10_hpnt15']
+  P/h=600.0   v=50.0  peaks ['5444', '4973']  spread 471.44  ['P60_v50_hptn1', 'P90_v50_hpnt15']
+  P/h=600.0   v=100.0 peaks ['4415', '4415']  spread 0.00  ['P60_v100_hptn1', 'P90_v100_hpnt15']
+
+== 6. Steady-state runs: convergence and the final field ==
+P120_v100_hpnt1            P=120.0 v=100.0 h=0.1  peak_final=   3370.6  max|last-prev|=    9.651  peak@frames[0,11,22..]=['1601', '2622', '2839', '3053', '3264']
+P120_v100_hpnt15           P=120.0 v=100.0 h=0.15 peak_final=   3357.7  max|last-prev|=    9.628  peak@frames[0,11,22..]=['1234', '2610', '2827', '3040', '3251']
+P120_v100_hpnt18           P=120.0 v=100.0 h=0.18 peak_final=   3183.4  max|last-prev|=    7.926  peak@frames[0,11,22..]=['1094', '2560', '2740', '2919', '3096']
+P120_v10_hpnt1             P=120.0 v=10.0 h=0.1  peak_final=   3370.6  max|last-prev|=    9.651  peak@frames[0,11,22..]=['1601', '2622', '2839', '3053', '3264']
+P120_v10_hpnt15            P=120.0 v=10.0 h=0.15 peak_final=   3357.7  max|last-prev|=    9.628  peak@frames[0,11,22..]=['1234', '2610', '2827', '3040', '3251']
+P120_v10_hpnt18            P=120.0 v=10.0 h=0.18 peak_final=   3183.4  max|last-prev|=    7.926  peak@frames[0,11,22..]=['1094', '2560', '2740', '2919', '3096']
+P120_v50_hpnt1             P=120.0 v=50.0 h=0.1  peak_final=   3370.6  max|last-prev|=    9.651  peak@frames[0,11,22..]=['1601', '2622', '2839', '3053', '3264']
+P120_v50_hpnt15            P=120.0 v=50.0 h=0.15 peak_final=   3357.7  max|last-prev|=    9.628  peak@frames[0,11,22..]=['1234', '2610', '2827', '3040', '3251']
+P120_v50_hpnt18            P=120.0 v=50.0 h=0.18 peak_final=   3183.4  max|last-prev|=    7.926  peak@frames[0,11,22..]=['1094', '2560', '2740', '2919', '3096']
+P60_v100_hpnt1             P=60.0 v=100.0 h=0.1  peak_final=   3270.0  max|last-prev|=    9.656  peak@frames[0,11,22..]=['1024', '2523', '2739', '2954', '3164']
+P60_v100_hpnt15            P=60.0 v=100.0 h=0.18 peak_final=   3140.6  max|last-prev|=    7.880  peak@frames[0,11,22..]=['700', '2520', '2699', '2878', '3054']
+P60_v10_hpnt1              P=60.0 v=10.0 h=0.1  peak_final=   3270.0  max|last-prev|=    9.656  peak@frames[0,11,22..]=['1024', '2523', '2739', '2954', '3164']
+P60_v10_hpnt15             P=60.0 v=10.0 h=0.15 peak_final=   3332.0  max|last-prev|=    9.553  peak@frames[0,11,22..]=['800', '2588', '2805', '3017', '3226']
+P60_v10_hpnt15/AM_wall     P=60.0 v=50.0 h=0.15 peak_final=   3332.0  max|last-prev|=    9.553  peak@frames[0,11,22..]=['800', '2588', '2805', '3017', '3226']
+P60_v10_hpnt18             P=60.0 v=10.0 h=0.18 peak_final=   3140.6  max|last-prev|=    7.880  peak@frames[0,11,22..]=['700', '2520', '2699', '2878', '3054']
+P60_v50_hpnt1              P=60.0 v=50.0 h=0.15 peak_final=   3332.0  max|last-prev|=    9.553  peak@frames[0,11,22..]=['800', '2588', '2805', '3017', '3226']
+P60_v50_hpnt15             P=60.0 v=50.0 h=0.15 peak_final=   3332.0  max|last-prev|=    9.553  peak@frames[0,11,22..]=['800', '2588', '2805', '3017', '3226']
+P60_v50_hpnt18             P=60.0 v=50.0 h=0.18 peak_final=   3140.6  max|last-prev|=    7.880  peak@frames[0,11,22..]=['700', '2520', '2699', '2878', '3054']
+P90_v100_hpnt1             P=90.0 v=100.0 h=0.1  peak_final=   4984.9  max|last-prev|=    4.685  peak@frames[0,11,22..]=['1332', '4620', '4725', '4830', '4933']
+P90_v100_hpnt15            P=90.0 v=100.0 h=0.15 peak_final=   3270.0  max|last-prev|=    9.656  peak@frames[0,11,22..]=['1024', '2523', '2739', '2954', '3164']
+P90_v100_hpnt18            P=90.0 v=100.0 h=0.18 peak_final=   3104.0  max|last-prev|=    7.950  peak@frames[0,11,22..]=['918', '2462', '2659', '2839', '3016']
+P90_v10_hpnt1              P=90.0 v=10.0 h=0.1  peak_final=   4984.9  max|last-prev|=    4.685  peak@frames[0,11,22..]=['1332', '4620', '4725', '4830', '4933']
+P90_v10_hpnt15             P=90.0 v=10.0 h=0.15 peak_final=   3270.0  max|last-prev|=    9.656  peak@frames[0,11,22..]=['1024', '2523', '2739', '2954', '3164']
+P90_v10_hpnt18             P=90.0 v=10.0 h=0.18 peak_final=   3104.0  max|last-prev|=    7.950  peak@frames[0,11,22..]=['918', '2462', '2659', '2839', '3016']
+P90_v50_hpnt1              P=90.0 v=50.0 h=0.1  peak_final=   4984.9  max|last-prev|=    4.685  peak@frames[0,11,22..]=['1332', '4620', '4725', '4830', '4933']
+P90_v50_hpnt15             P=90.0 v=50.0 h=0.15 peak_final=   3270.0  max|last-prev|=    9.656  peak@frames[0,11,22..]=['1024', '2523', '2739', '2954', '3164']
+P90_v50_hpnt18             P=90.0 v=50.0 h=0.18 peak_final=   3104.0  max|last-prev|=    7.950  peak@frames[0,11,22..]=['918', '2462', '2659', '2839', '3016']
+
+   Final steady field vs speed: same (P, hatch) at different v
+   P=60.0 h=0.1  P60_v100_hpnt1 (v=100.0) vs P60_v10_hpnt1 (v=10.0): max|diff|=0  peaks 3270/3270
+   P=60.0 h=0.15  P60_v10_hpnt15 (v=10.0) vs P60_v10_hpnt15/AM_wall (v=50.0): max|diff|=0  peaks 3332/3332
+   P=60.0 h=0.15  P60_v10_hpnt15 (v=10.0) vs P60_v50_hpnt1 (v=50.0): max|diff|=0  peaks 3332/3332
+   P=60.0 h=0.15  P60_v10_hpnt15 (v=10.0) vs P60_v50_hpnt15 (v=50.0): max|diff|=0  peaks 3332/3332
+   P=60.0 h=0.15  P60_v10_hpnt15/AM_wall (v=50.0) vs P60_v50_hpnt1 (v=50.0): max|diff|=0  peaks 3332/3332
+   P=60.0 h=0.15  P60_v10_hpnt15/AM_wall (v=50.0) vs P60_v50_hpnt15 (v=50.0): max|diff|=0  peaks 3332/3332
+   P=60.0 h=0.15  P60_v50_hpnt1 (v=50.0) vs P60_v50_hpnt15 (v=50.0): max|diff|=0  peaks 3332/3332
+   P=60.0 h=0.18  P60_v100_hpnt15 (v=100.0) vs P60_v10_hpnt18 (v=10.0): max|diff|=0  peaks 3141/3141
+   P=60.0 h=0.18  P60_v100_hpnt15 (v=100.0) vs P60_v50_hpnt18 (v=50.0): max|diff|=0  peaks 3141/3141
+   P=60.0 h=0.18  P60_v10_hpnt18 (v=10.0) vs P60_v50_hpnt18 (v=50.0): max|diff|=0  peaks 3141/3141
+   P=90.0 h=0.1  P90_v100_hpnt1 (v=100.0) vs P90_v10_hpnt1 (v=10.0): max|diff|=0  peaks 4985/4985
+   P=90.0 h=0.1  P90_v100_hpnt1 (v=100.0) vs P90_v50_hpnt1 (v=50.0): max|diff|=0  peaks 4985/4985
+   P=90.0 h=0.1  P90_v10_hpnt1 (v=10.0) vs P90_v50_hpnt1 (v=50.0): max|diff|=0  peaks 4985/4985
+   P=90.0 h=0.15  P90_v100_hpnt15 (v=100.0) vs P90_v10_hpnt15 (v=10.0): max|diff|=0  peaks 3270/3270
+   P=90.0 h=0.15  P90_v100_hpnt15 (v=100.0) vs P90_v50_hpnt15 (v=50.0): max|diff|=0  peaks 3270/3270
+   P=90.0 h=0.15  P90_v10_hpnt15 (v=10.0) vs P90_v50_hpnt15 (v=50.0): max|diff|=0  peaks 3270/3270
+   P=90.0 h=0.18  P90_v100_hpnt18 (v=100.0) vs P90_v10_hpnt18 (v=10.0): max|diff|=0  peaks 3104/3104
+   P=90.0 h=0.18  P90_v100_hpnt18 (v=100.0) vs P90_v50_hpnt18 (v=50.0): max|diff|=0  peaks 3104/3104
+   P=90.0 h=0.18  P90_v10_hpnt18 (v=10.0) vs P90_v50_hpnt18 (v=50.0): max|diff|=0  peaks 3104/3104
+   P=120.0 h=0.1  P120_v100_hpnt1 (v=100.0) vs P120_v10_hpnt1 (v=10.0): max|diff|=0  peaks 3371/3371
+   P=120.0 h=0.1  P120_v100_hpnt1 (v=100.0) vs P120_v50_hpnt1 (v=50.0): max|diff|=0  peaks 3371/3371
+   P=120.0 h=0.1  P120_v10_hpnt1 (v=10.0) vs P120_v50_hpnt1 (v=50.0): max|diff|=0  peaks 3371/3371
+   P=120.0 h=0.15  P120_v100_hpnt15 (v=100.0) vs P120_v10_hpnt15 (v=10.0): max|diff|=0  peaks 3358/3358
+   P=120.0 h=0.15  P120_v100_hpnt15 (v=100.0) vs P120_v50_hpnt15 (v=50.0): max|diff|=0  peaks 3358/3358
+   P=120.0 h=0.15  P120_v10_hpnt15 (v=10.0) vs P120_v50_hpnt15 (v=50.0): max|diff|=0  peaks 3358/3358
+   P=120.0 h=0.18  P120_v100_hpnt18 (v=100.0) vs P120_v10_hpnt18 (v=10.0): max|diff|=0  peaks 3183/3183
+   P=120.0 h=0.18  P120_v100_hpnt18 (v=100.0) vs P120_v50_hpnt18 (v=50.0): max|diff|=0  peaks 3183/3183
+   P=120.0 h=0.18  P120_v10_hpnt18 (v=10.0) vs P120_v50_hpnt18 (v=50.0): max|diff|=0  peaks 3183/3183
+
+   Steady peak vs P/hatch (should be proportional if the steady problem is linear in the source)
+   P=60.0  h=0.18  P/h=  333.3  rise=    3075.6  rise/(P/h)=9.227
+   P=60.0  h=0.15  P/h=  400.0  rise=    3267.0  rise/(P/h)=8.167
+   P=90.0  h=0.18  P/h=  500.0  rise=    3039.0  rise/(P/h)=6.078
+   P=60.0  h=0.1   P/h=  600.0  rise=    3205.0  rise/(P/h)=5.342
+   P=90.0  h=0.15  P/h=  600.0  rise=    3205.0  rise/(P/h)=5.342
+   P=120.0 h=0.18  P/h=  666.7  rise=    3118.4  rise/(P/h)=4.678
+   P=120.0 h=0.15  P/h=  800.0  rise=    3292.7  rise/(P/h)=4.116
+   P=90.0  h=0.1   P/h=  900.0  rise=    4919.9  rise/(P/h)=5.467
+   P=120.0 h=0.1   P/h= 1200.0  rise=    3305.6  rise/(P/h)=2.755
+
+== 7. Active (ever-changing) nodes ==
+active 1094, air 4072 of 5166
+
+== 8. Is the steady peak related to the transient peak of the same setting? ==
+   P120_v100_hpnt1    transient peak     8045   steady final peak     3371   ratio 2.387
+   P120_v100_hpnt15   transient peak     5692   steady final peak     3358   ratio 1.695
+   P120_v100_hpnt18   transient peak     4848   steady final peak     3183   ratio 1.523
+   P120_v10_hpnt1     transient peak     9311   steady final peak     3371   ratio 2.762
+   P120_v10_hpnt15    transient peak     6819   steady final peak     3358   ratio 2.031
+   P120_v10_hpnt18    transient peak     5916   steady final peak     3183   ratio 1.858
+   P120_v50_hpnt1     transient peak     8879   steady final peak     3371   ratio 2.634
+   P120_v50_hpnt15    transient peak     6371   steady final peak     3358   ratio 1.897
+   P120_v50_hpnt18    transient peak     5451   steady final peak     3183   ratio 1.712
+   P60_v100_hpnt15    transient peak     3094   NO steady run with these exact parameters
+   P60_v100_hpnt18    transient peak     2652   steady final peak     3141   ratio 0.844
+   P60_v100_hptn1     transient peak     4415   steady final peak     3270   ratio 1.350
+   P60_v10_hpnt1      transient peak     5444   steady final peak     3270   ratio 1.665
+   P60_v10_hpnt15     transient peak     3923   steady final peak     3332   ratio 1.177
+   P60_v10_hpnt18     transient peak     3369   steady final peak     3141   ratio 1.073
+   P60_v50_hpnt15     transient peak     3476   steady final peak     3332   ratio 1.043
+   P60_v50_hpnt18     transient peak     2965   steady final peak     3141   ratio 0.944
+   P60_v50_hptn1      transient peak     5444   NO steady run with these exact parameters
+   P90_v100_hpnt1     transient peak     6303   steady final peak     4985   ratio 1.264
+   P90_v100_hpnt15    transient peak     4415   steady final peak     3270   ratio 1.350
+   P90_v100_hpnt18    transient peak     3757   steady final peak     3104   ratio 1.210
+   P90_v10_hpnt1      transient peak     7477   steady final peak     4985   ratio 1.500
+   P90_v10_hpnt15     transient peak     5444   steady final peak     3270   ratio 1.665
+   P90_v10_hpnt18     transient peak     4712   steady final peak     3104   ratio 1.518
+   P90_v50_hpnt1      transient peak     7030   steady final peak     4985   ratio 1.410
+   P90_v50_hpnt15     transient peak     4973   steady final peak     3270   ratio 1.521
+   P90_v50_hpnt18     transient peak     4233   steady final peak     3104   ratio 1.364
+
+wrote /home/ayush/Desktop/Ayush_btp/bead2_outputs/data_report.json

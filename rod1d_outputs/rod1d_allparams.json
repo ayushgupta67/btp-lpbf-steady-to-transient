@@ -1,0 +1,74 @@
+[
+ {
+  "name": "all_params+ss",
+  "n_train": 100,
+  "steady_input": true,
+  "train_s": 39.51581835746765,
+  "rmse_C": 13.56783933885707,
+  "mae_C": 5.28200988306129,
+  "mean_abs_peak_err_pct": 1.0979026168130117,
+  "median_abs_peak_err_pct": 0.783446614816451,
+  "p95_abs_peak_err_pct": 3.4398462722391305,
+  "rel_l2": 0.009890765721938661
+ },
+ {
+  "name": "all_params_only",
+  "n_train": 100,
+  "steady_input": false,
+  "train_s": 22.32510781288147,
+  "rmse_C": 17.209651441008425,
+  "mae_C": 6.095046023648962,
+  "mean_abs_peak_err_pct": 1.178980954204984,
+  "median_abs_peak_err_pct": 0.907804984619061,
+  "p95_abs_peak_err_pct": 3.3217466825416233,
+  "rel_l2": 0.010566698540043787
+ },
+ {
+  "name": "all_params+ss",
+  "n_train": 400,
+  "steady_input": true,
+  "train_s": 45.29605555534363,
+  "rmse_C": 9.12881544467936,
+  "mae_C": 3.756603279276309,
+  "mean_abs_peak_err_pct": 0.8118431419977861,
+  "median_abs_peak_err_pct": 0.6549162757876488,
+  "p95_abs_peak_err_pct": 2.203953777570785,
+  "rel_l2": 0.0068502814538329675
+ },
+ {
+  "name": "all_params_only",
+  "n_train": 400,
+  "steady_input": false,
+  "train_s": 45.757193088531494,
+  "rmse_C": 10.094265007660741,
+  "mae_C": 4.345861104363446,
+  "mean_abs_peak_err_pct": 0.7375368009565602,
+  "median_abs_peak_err_pct": 0.6336221436497844,
+  "p95_abs_peak_err_pct": 1.7953101413914272,
+  "rel_l2": 0.007930117071722144
+ },
+ {
+  "name": "all_params+ss",
+  "n_train": 1600,
+  "steady_input": true,
+  "train_s": 21.59520149230957,
+  "rmse_C": 7.197196598969896,
+  "mae_C": 3.475457281390912,
+  "mean_abs_peak_err_pct": 0.7642107645778206,
+  "median_abs_peak_err_pct": 0.7334732193009024,
+  "p95_abs_peak_err_pct": 1.574417935827314,
+  "rel_l2": 0.006763682964648498
+ },
+ {
+  "name": "all_params_only",
+  "n_train": 1600,
+  "steady_input": false,
+  "train_s": 19.996485471725464,
+  "rmse_C": 8.484641704894736,
+  "mae_C": 3.9443287527474675,
+  "mean_abs_peak_err_pct": 0.7194439781884393,
+  "median_abs_peak_err_pct": 0.6364204158854975,
+  "p95_abs_peak_err_pct": 1.657879696650046,
+  "rel_l2": 0.007138768465504087
+ }
+]

@@ -1,0 +1,32 @@
+{
+ "steady_seed1": {
+  "mae_C": 903.2925383321355,
+  "mae_next_to_void_or_wall_C": 1480.857305254255,
+  "mae_in_bulk_C": 638.180842040015,
+  "corr": 0.9159726988066547
+ },
+ "steady_seed2": {
+  "mae_C": 1091.2675053457197,
+  "mae_next_to_void_or_wall_C": 2295.9967038290843,
+  "mae_in_bulk_C": 538.2770535828637,
+  "corr": 0.8423974775992732
+ },
+ "shape_only_seed0": {
+  "mae_C": 951.2507062761971,
+  "mae_next_to_void_or_wall_C": 2218.320058822632,
+  "mae_in_bulk_C": 369.6451018286533,
+  "corr": 0.8332780791979294
+ },
+ "shape_only_seed1": {
+  "mae_C": 771.2008697852659,
+  "mae_next_to_void_or_wall_C": 1865.3694697788783,
+  "mae_in_bulk_C": 268.95954519803405,
+  "corr": 0.8680443035933774
+ },
+ "shape_only_seed2": {
+  "mae_C": 955.0818478873606,
+  "mae_next_to_void_or_wall_C": 2225.557477406093,
+  "mae_in_bulk_C": 371.9127064689261,
+  "corr": 0.841376999722379
+ }
+}

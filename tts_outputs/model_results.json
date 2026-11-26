@@ -1,0 +1,32 @@
+{
+ "n_train": 3132,
+ "n_test": 712,
+ "test_layers": "9-10",
+ "test_tr_peak_std_C": 4426.944935292091,
+ "test_tr_peak_range_C": [
+  117826.1796875,
+  149336.21875
+ ],
+ "mean_of_training": {
+  "mae_C": 2634.039981719041,
+  "mae_next_to_void_or_wall_C": 5439.375119865429,
+  "mae_in_bulk_C": 1346.3451642092232,
+  "corr": 0.0
+ },
+ "linear_centre_steady": {
+  "mae_C": 1489.6205942326073,
+  "mae_next_to_void_or_wall_C": 3259.1666540177393,
+  "mae_in_bulk_C": 677.3699438394318,
+  "corr": 0.8829409012981009
+ },
+ "train_s": 33.495373249053955,
+ "diffusion": {
+  "mae_C": 1230.8783057566438,
+  "mae_next_to_void_or_wall_C": 2423.1449124472483,
+  "mae_in_bulk_C": 683.6083879314485,
+  "corr": 0.8483860302515223
+ },
+ "parameters": 382361,
+ "epochs": 82,
+ "total_s": 35.20350503921509
+}

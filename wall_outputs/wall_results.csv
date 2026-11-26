@@ -1,0 +1,8 @@
+method,MAE_C
+diffusion (mean of draws),1.480578581517636
+ridge field->field (lam=0.01),1.50798511395656
+ridge field->field (lam=100),1.5283142633248032
+per-cell affine,1.550586186256914
+per-cell mean,1.6279047615805065
+global mean,2.352511647403135
+copy the steady field,4.379299677899668

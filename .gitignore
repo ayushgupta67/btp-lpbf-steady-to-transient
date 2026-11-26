@@ -1,0 +1,45 @@
+# ---- not in the repository: simulation data, environment, large or private files ----
+.venv/
+__pycache__/
+.vscode/
+.~lock*
+*.zip
+SS_new/
+Steady_state_wall/
+Transient_wall/
+Trans_to_SS_dataset/
+Updated_complete_dataset_singlebead/
+Single_bead_Data_set/
+*.npz
+*.npy
+*.pt
+*.mp4
+*.webm
+*.csv.gz
+final_deck_assets/video_dl/
+report/.build/
+materials-13-04576-v3.pdf
+
+# experiment outputs: keep only summaries, logs, results tables and figures (no simulation values)
+*_outputs/**
+!*_outputs/**/
+!*_outputs/**/*.md
+!*_outputs/**/*.json
+!*_outputs/**/*.png
+!*_outputs/**/*.txt
+!*_outputs/**/*results*.csv
+!*_outputs/**/cv_folds.csv
+*_outputs/**/cache/
+*_outputs/**/csv/
+*_outputs/**/model/
+
+# documents: only the PDFs listed here
+*.pptx
+*.docx
+*.pdf
+!report/BTP_report.pdf
+!presentation/BTP_final_presentation.pdf
+!BTP_midsem_presentation.pdf
+!slide_meet8.pdf
+!slide_meet9.pdf
+!slide_meet10.pdf
