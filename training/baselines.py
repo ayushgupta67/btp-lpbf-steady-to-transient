@@ -5,8 +5,14 @@ the same cells and the same split for a ladder of predictors, from "ignore the
 input entirely" up to "linear map of the whole field". If a neural model does
 not clear the top of this ladder, it has not learned the mapping.
 
-    python baselines.py
+    python training/baselines.py
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
 
 import numpy as np
 

@@ -1,8 +1,15 @@
 """Critical analysis of the geometry dataset (part_1): pairing, value ranges, and whether the
 steady-state temperature now changes from element to element (the point of the local-domain model).
 
-    python tts_analyze.py      -> prints the report, writes tts_outputs/elements.csv and figures
+    python analysis/tts_analyze.py      -> prints the report, writes results/case3_geometry/elements.csv and figures
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import csv
 import json
 

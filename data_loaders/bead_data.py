@@ -30,14 +30,19 @@ What the data turned out to contain (all checked, see build_bead_csv.py)
   P90/h0.15 are bit-identical runs.
 """
 
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import re
 from dataclasses import dataclass
-from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).parent / "Single_bead_Data_set"
-CACHE = Path(__file__).parent / "bead_outputs" / "cache" / "frames.npz"
+ROOT = REPO / "data" / "Single_bead_Data_set"
+CACHE = REPO / "results" / "case2_snapshot_task" / "cache_v1" / "frames.npz"
 
 N_NODES = 5166
 BASE_T = 65.0  # every untouched node reads exactly this (Amb_Temp.txt says 25.0)

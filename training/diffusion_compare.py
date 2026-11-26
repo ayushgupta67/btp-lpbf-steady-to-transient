@@ -28,8 +28,14 @@
 6. A plain MLP regressor is trained on the identical data and reported beside
    the diffusion model. Diffusion is only the right tool if it wins here.
 
-    python diffusion_compare.py --epochs 300
+    python training/diffusion_compare.py --epochs 300
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
 
 import argparse
 import time

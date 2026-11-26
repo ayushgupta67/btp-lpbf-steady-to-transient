@@ -1,13 +1,19 @@
 """Figures and RESULTS.md for the updated single-bead experiments (reads the cv_*.csv files)."""
-import csv, json
+
+import sys
 from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
+import csv, json
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import bead2_data as bd
 
-OUT = Path(__file__).parent / "bead2_outputs"
+OUT = REPO / "results" / "case2_snapshot_task"
 files = ["cv_results.csv", "cv_hybrid_v2_results.csv", "cv_hybrid_v3_results.csv"]
 rows = [r for f in files for r in csv.DictReader(open(OUT / f))]
 methods = list(dict.fromkeys(r["method"] for r in rows))

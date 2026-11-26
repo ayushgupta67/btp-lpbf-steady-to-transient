@@ -15,19 +15,23 @@ the later one is named "<case>/<subdir>" so nothing is silently dropped. Folders
 no frames at all (Steady_state/P60_v100_hpnt18 at the time of writing) are reported in
 `MISSING`, not loaded.
 
-`load_cases()` caches the parsed frames in bead2_outputs/cache/frames.npz.
+`load_cases()` caches the parsed frames in results/case2_snapshot_task/cache/frames.npz.
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
 
 import re
 from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass
-from pathlib import Path
 
 import numpy as np
 
-HERE = Path(__file__).parent
-ROOT = HERE / "Updated_complete_dataset_singlebead" / "Single_bead_Data_set"
-CACHE = HERE / "bead2_outputs" / "cache" / "frames.npz"
+ROOT = REPO / "data" / "Updated_complete_dataset_singlebead" / "Single_bead_Data_set"
+CACHE = REPO / "results" / "case2_snapshot_task" / "cache" / "frames.npz"
 
 N_NODES = 5166
 NX, NY, NZ = 41, 42, 3

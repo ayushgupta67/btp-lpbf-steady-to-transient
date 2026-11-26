@@ -21,6 +21,12 @@ Structure that matters for modelling
   y=10,11, z=2..18 running through x=3..7.
 """
 
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import numpy as np
 
 NX, NY, NZ = 8, 22, 21
@@ -51,7 +57,7 @@ def load_folder(folder, n=N_FRAMES):
 class WallData:
     """Loads both folders, flattens to the active cells, and splits by time block."""
 
-    def __init__(self, root=".", n=N_FRAMES):
+    def __init__(self, root=str(REPO / "data"), n=N_FRAMES):
         self.t, transient = load_folder(f"{root}/Transient_wall", n)
         self.t_steady, steady = load_folder(f"{root}/Steady_state_wall", n)
 

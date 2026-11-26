@@ -1,4 +1,11 @@
-"""Figures and RESULTS.md for the max-temperature mapping (reads maxmap_outputs/)."""
+"""Figures and RESULTS.md for the max-temperature mapping (reads results/case2_single_bead/)."""
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import csv, json
 import matplotlib
 matplotlib.use("Agg")

@@ -1,7 +1,7 @@
 """Loader for the geometry dataset (Trans_to_SS_dataset): one part built element by element.
 
-Layout:  Trans_to_SS_dataset/<part>/SS/my_temp_<k>.txt     steady state, one file per step
-         Trans_to_SS_dataset/<part>/Trans/my_temp_<k>.txt  transient, several files per step
+Layout:  data/Trans_to_SS_dataset/<part>/SS/my_temp_<k>.txt     steady state, one file per step
+         data/Trans_to_SS_dataset/<part>/Trans/my_temp_<k>.txt  transient, several files per step
 Each file: line 1 " total time is <t>", line 2: N temperatures (C), N = (e_x+1)(e_y+1)(e_z+snelz+1),
 x fastest: reshape(nz, ny, nx).
 
@@ -10,18 +10,22 @@ element is added and heated for t_on = layer_thickness / v (1 s here), followed 
 recoater_time (5 s). SS: one steady solve per step, sink at 65 C on active nodes outside a hemisphere
 of radius 1.5*sqrt(5.18 * t_on) around the new element. Transient: time-stepped, base held at 180 C.
 Both runs end each element step on the same total time, which is how they are paired here.
-Parsed parts are cached in tts_outputs/cache/.
+Parsed parts are cached in results/case3_geometry/cache/.
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
 
 import re
 from concurrent.futures import ProcessPoolExecutor
-from pathlib import Path
 
 import numpy as np
 
-HERE = Path(__file__).parent
-ROOT = HERE / "Trans_to_SS_dataset"
-OUT = HERE / "tts_outputs"
+ROOT = REPO / "data" / "Trans_to_SS_dataset"
+OUT = REPO / "results" / "case3_geometry"
 
 
 def _read(path):

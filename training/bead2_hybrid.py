@@ -1,7 +1,7 @@
 """Hybrid model: physics-style amplitude x diffusion shape, evaluated with the same
 leave-one-setting-out folds as bead2_train.py.
 
-    python -u bead2_hybrid.py
+    python -u training/bead2_hybrid.py
 
 Why: the data analysis showed that (1) the field is exactly 65 C everywhere one time unit
 after the scan ends (heat_end = 2 + 3.2 / v), so only t = 2 (all runs) and t = 3 (v = 10 only)
@@ -16,12 +16,17 @@ diffusion model has to learn both from 156 rows, 2/3 of which are all-ambient. H
 Everything that depends on held-out data is recomputed inside each fold.
 """
 
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import csv
 import json
 import time
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
-from pathlib import Path
 
 import numpy as np
 import torch
@@ -30,7 +35,7 @@ import bead2_data as bd
 import bead_model as bm
 from bead2_train import baselines, group_key, make_xy, rmse_pair, z_clip_for
 
-OUT = Path(__file__).parent / "bead2_outputs"
+OUT = REPO / "results" / "case2_snapshot_task"
 BASE_T = bd.BASE_T
 SCALE = 100.0  # shape in [0, 1] is stored as a temperature 65 + 100 * shape for the diffusion code
 _G = {}

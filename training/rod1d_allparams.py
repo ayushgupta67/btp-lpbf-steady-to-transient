@@ -1,11 +1,18 @@
 """Variant: all physical inputs as numbers (P, v, conductivity alpha, cooling beta, spot radius r).
 
-    python -u rod1d_allparams.py      (after rod1d_experiment.py; reuses its data)
+    python -u training/rod1d_allparams.py      (after rod1d_experiment.py; reuses its data)
 
 Two models, N = 100 / 400 / 1,600 training runs, tested on the same 300 unseen runs:
   * steady field + all 5 numbers
   * all 5 numbers only (no steady field)
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import json
 import time
 from concurrent.futures import ProcessPoolExecutor
@@ -15,7 +22,7 @@ import numpy as np
 import torch
 
 import rod1d_sim as sim
-from maxmap_model import Config, Model
+from diffusion_model import Config, Model
 from rod1d_experiment import BATCH, OUT, UPDATES, log_features, metrics
 
 KEYS = ["P", "v", "alpha", "beta", "r"]

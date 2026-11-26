@@ -1,29 +1,34 @@
 """1D demonstration of the max steady -> max transient mapping, with enough data.
 
-    python -u rod1d_experiment.py
+    python -u training/rod1d_experiment.py
 
 1. Generate 1,600 training runs and 300 test runs (rod1d_sim.py), save them (npz + CSV).
-2. Train the same diffusion model as the bead task (maxmap_model.py) on N = 25 .. 1,600 runs,
+2. Train the same diffusion model as the bead task (model/diffusion_model.py) on N = 25 .. 1,600 runs,
    always the same number of updates, and test on the 300 unseen runs: error vs amount of data.
 3. Same, but with the steady field removed from the input (only P, v): does the steady input help?
 4. The steady field used directly as the answer (the cheap model on its own): how big is the gap?
-Outputs in rod1d_outputs/.
+Outputs in results/case1_rod_moving_laser/.
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
 
 import csv
 import json
 import time
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
-from pathlib import Path
 
 import numpy as np
 import torch
 
 import rod1d_sim as sim
-from maxmap_model import Config, Model
+from diffusion_model import Config, Model
 
-OUT = Path(__file__).parent / "rod1d_outputs"
+OUT = REPO / "results" / "case1_rod_moving_laser"
 UPDATES, BATCH = 8000, 32
 SIZES = [25, 50, 100, 200, 400, 800, 1600]
 NO_SS_SIZES = [100, 400, 1600]

@@ -24,6 +24,12 @@ Design notes
 * DDPM noising with 400 steps, DDIM sampling in 50 steps.
 """
 
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import math
 
 import numpy as np

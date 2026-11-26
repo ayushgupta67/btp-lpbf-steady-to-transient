@@ -1,16 +1,22 @@
 """Train and evaluate the max-temperature diffusion model.
 
-    python -u maxmap_train.py                    # final model + 24-fold cross-validation
-    python -u maxmap_train.py --skip-cv          # final model only
-    python -u maxmap_train.py --transient-root DIR --ss-root DIR   # any other / larger dataset
+    python -u training/maxmap_train.py                    # final model + 24-fold cross-validation
+    python -u training/maxmap_train.py --skip-cv          # final model only
+    python -u training/maxmap_train.py --transient-root DIR --ss-root DIR   # any other / larger dataset
 
 Input : per-node max of the steady-state run (SS_new) + P, v, hatch
 Output: per-node max of the transient run
-One pair per run. The final model (all pairs) is saved to maxmap_outputs/model/maxmap_diffusion.pt.
+One pair per run. The final model (all pairs) is saved to results/case2_single_bead/model/maxmap_diffusion.pt.
 Honest test: leave-one-group-out CV, a group = runs with the same (P/hatch, v), which are
 physically identical, so a twin can never sit in training while the other is tested.
 Errors in deg C over all 5,166 nodes and over the modelled (active) nodes; peak error in %.
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
 
 import argparse
 import csv
@@ -19,13 +25,12 @@ import os
 import time
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
-from pathlib import Path
 
 import numpy as np
 import torch
 
 import maxmap_data as md
-from maxmap_model import BASE_T, Config, Model
+from diffusion_model import BASE_T, Config, Model
 
 _G = {}
 

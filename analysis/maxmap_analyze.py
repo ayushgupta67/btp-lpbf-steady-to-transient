@@ -1,7 +1,13 @@
 """Critical checks of the new steady-state data (SS_new) and of the max-temperature pairs.
 
-    python maxmap_analyze.py        # prints the report, writes maxmap_outputs/analysis.json
+    python analysis/maxmap_analyze.py        # prints the report, writes results/case2_single_bead/analysis.json
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
 
 import json
 from itertools import combinations

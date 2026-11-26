@@ -1,7 +1,7 @@
 """The best model found on the updated dataset: amplitude x shape, no neural network.
 
-    python bead2_best_model.py --fit                     # fit on all usable runs, save to bead2_outputs/model/best_simple_model.npz
-    python bead2_best_model.py --P 75 --v 50 --hatch 0.12 --t 2
+    python training/bead2_best_model.py --fit                     # fit on all usable runs, save to results/case2_snapshot_task/model/best_simple_model.npz
+    python training/bead2_best_model.py --P 75 --v 50 --hatch 0.12 --t 2
 
 field(t) = 65 + A(P/hatch, v, t) * shape(P/hatch, v, t)
 * A: ln(peak rise) is quadratic in (ln q, ln v), q = P / hatch, one fit per whole-number time t in {2, 3}
@@ -11,15 +11,20 @@ Cross-validated RMSE on unseen settings: 0.22 C over all nodes (0.55 C at t = 2)
 that was not in training uses the nearest trained speed's shape, and is less reliable.
 """
 
-import argparse
+import sys
 from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
+import argparse
 
 import numpy as np
 
 import bead2_data as bd
 from bead2_hybrid import amp_fit, amp_predict, has_signal, shapes_of
 
-OUT = Path(__file__).parent / "bead2_outputs" / "model"
+OUT = REPO / "results" / "case2_snapshot_task" / "model"
 B = bd.BASE_T
 
 

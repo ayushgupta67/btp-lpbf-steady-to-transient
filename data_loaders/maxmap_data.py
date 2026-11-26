@@ -9,24 +9,28 @@ Designed to grow: point TRANSIENT_ROOT / SS_ROOT (or the --transient-root / --ss
 the scripts) at any folder tree. Every directory that contains my_temp_<k>.txt files is one run;
 its settings come from power.txt, velocity.txt and hatch.txt inside it (never from the name).
 Runs are matched transient <-> steady by (P, v, hatch). Each parsed run is cached on its own in
-maxmap_outputs/cache/, keyed by the folder's file count and newest modification time, so adding
+results/case2_single_bead/cache/, keyed by the folder's file count and newest modification time, so adding
 new runs only parses the new folders.
 
 File format of my_temp_<k>.txt: line 1 " total time is <t>", line 2: N_NODES temperatures (C).
 """
 
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import hashlib
 import re
 from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass, field
-from pathlib import Path
 
 import numpy as np
 
-HERE = Path(__file__).parent
-TRANSIENT_ROOT = HERE / "Updated_complete_dataset_singlebead" / "Single_bead_Data_set" / "Transient"
-SS_ROOT = HERE / "SS_new" / "dataset"
-OUT = HERE / "maxmap_outputs"
+TRANSIENT_ROOT = REPO / "data" / "Updated_complete_dataset_singlebead" / "Single_bead_Data_set" / "Transient"
+SS_ROOT = REPO / "data" / "SS_new" / "dataset"
+OUT = REPO / "results" / "case2_single_bead"
 CACHE = OUT / "cache"
 
 N_NODES = 5166

@@ -1,7 +1,7 @@
 """Case 1 as specified by the supervisor: a 1D rod with a heat flux at the top and a fixed
 temperature at the bottom (the rod of Ranjan et al. 2020, Sec. 3.2), with no scan speed.
 
-    python rod_flux_sim.py      (quick check of a few runs)
+    python simulators/rod_flux_sim.py      (quick check of a few runs)
 
 Rod of length L = 10 mm on N = 101 nodes; x = 0 is the bottom, held at T0 = 65 C (Dirichlet, the
 heat sink); x = L is the top, where a heat flux q (W/mm^2) enters during the heating time t_h and

@@ -1,32 +1,38 @@
 """Case 3 (geometry dataset): learn steady peak -> transient peak around each element.
 
-    python -u tts_model.py
+    python -u training/tts_model.py
 
 Sample = one element. Input: 5 x 5 patch of steady peaks centred on it (same layer; voids and the outside
 are empty) + the layer number. Output: the 5 x 5 patch of transient peaks; the score uses the centre value.
-Same diffusion code as Cases 1 and 2 (maxmap_model.py).
+Same diffusion code as Cases 1 and 2 (model/diffusion_model.py).
 Split: train on layers 1-8, test on layers 9-10, where the hole widens into a round hole the model never saw.
 Baselines on the same test elements: training mean, and a linear fit on the centre steady peak + layer.
 Temperatures are shifted/scaled before the model (T' = 65 + (T - 90,000) / 100) because the raw values are ~1e5 C;
 empty cells are T' = 65. Every reported number is back in C.
-Outputs: tts_outputs/model_results.json, tts_outputs/model_predictions.npz
+Outputs: results/case3_geometry/model_results.json, results/case3_geometry/model_predictions.npz
 
-    python -u tts_model.py --checks
+    python -u training/tts_model.py --checks
 
-Robustness check -> tts_outputs/model_checks.json: the same model with seeds 1 and 2, and a "shape only"
+Robustness check -> results/case3_geometry/model_checks.json: the same model with seeds 1 and 2, and a "shape only"
 input (every solid cell set to one constant, so only the position of walls and voids is visible), seeds 0-2.
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import csv
 import json
 import time
-from pathlib import Path
 
 import numpy as np
 import torch
 
-from maxmap_model import Config, Model
+from diffusion_model import Config, Model
 
-OUT = Path(__file__).parent / "tts_outputs"
+OUT = REPO / "results" / "case3_geometry"
 R, N_TEST_FROM = 2, 9
 UPDATES, BATCH = 8000, 32
 

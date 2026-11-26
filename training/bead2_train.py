@@ -1,15 +1,15 @@
 """Train the steady -> transient diffusion model on the UPDATED single-bead dataset and
 evaluate it honestly.
 
-    python -u bead2_train.py                 # whole job, about 15-25 min on this laptop CPU
-    python -u bead2_train.py --skip-cv       # only the final model (about 2 min)
+    python -u training/bead2_train.py                 # whole job, about 15-25 min on this laptop CPU
+    python -u training/bead2_train.py --skip-cv       # only the final model (about 2 min)
 
 Task: input  = steady-state field (1,094 active nodes) + P, v, hatch + time t
       output = transient temperature field (1,094 active nodes) at t = 2, 3, 4, 5, 6, 7
 Only whole-number times are used (nearest stored frame); the decimal frames inside the scan
 carry the solver's numerical undershoot (see bead2_analyze.py).
 
-1. Final model trained on every usable (run, time) row, saved to bead2_outputs/model/.
+1. Final model trained on every usable (run, time) row, saved to results/case2_snapshot_task/model/.
 2. Leave-one-setting-out cross-validation: runs with the same (P/hatch, v) are bit-identical
    (e.g. P60/h0.10 and P90/h0.15), so they are held out together; training on one and testing
    on its twin would only measure memorisation. 24 settings -> 24 retrainings, run in parallel.
@@ -19,6 +19,12 @@ Errors are RMSE in degrees C, over all 5,166 nodes and over the 1,094 active nod
 (the 4,072 air nodes are exactly 65 C in truth and in every prediction).
 """
 
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import argparse
 import csv
 import json
@@ -26,7 +32,6 @@ import os
 import time
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
-from pathlib import Path
 
 import numpy as np
 import torch
@@ -34,7 +39,7 @@ import torch
 import bead2_data as bd
 import bead_model as bm
 
-OUT = Path(__file__).parent / "bead2_outputs"
+OUT = REPO / "results" / "case2_snapshot_task"
 BASE_T = bd.BASE_T
 N_ALL = bd.N_NODES
 _G = {}  # per-process copy of the arrays, set by _init

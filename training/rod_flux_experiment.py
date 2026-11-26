@@ -1,28 +1,34 @@
 """Case 1 on the supervisor's rod (rod_flux_sim.py): max steady field + ln q, ln t_h -> max transient field.
 
-    python -u rod_flux_experiment.py      -> rodflux_outputs/
+    python -u training/rod_flux_experiment.py      -> results/case1_rod/
 
 1. 1,600 training and 300 unseen test runs.
-2. Diffusion model (maxmap_model.py) with the steady field; the same without it (q, t_h only);
+2. Diffusion model (model/diffusion_model.py) with the steady field; the same without it (q, t_h only);
    and with every physical input given as a number (q, t_h, k0, c, f), with and without the steady field.
 3. The steady field used directly as the answer.
 4. Local domain in 1D: how much the hidden low-conductivity patch changes the steady and the transient
    peak, against the patch depth below the top measured in characteristic lengths Lc = sqrt(alpha t_h).
 """
+
+import sys
+from pathlib import Path
+
+REPO = Path(__file__).resolve().parents[1]
+sys.path[:0] = [str(REPO / d) for d in ("model", "simulators", "data_loaders", "training")]
+
 import csv
 import json
 import time
 from concurrent.futures import ProcessPoolExecutor
 from multiprocessing import get_context
-from pathlib import Path
 
 import numpy as np
 import torch
 
 import rod_flux_sim as sim
-from maxmap_model import Config, Model
+from diffusion_model import Config, Model
 
-OUT = Path(__file__).parent / "rodflux_outputs"
+OUT = REPO / "results" / "case1_rod"
 UPDATES, BATCH = 8000, 32
 _D = {}
 
